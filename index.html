@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Template</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<style>
+	    @media only screen and (max-width: 768px)  
+			{
+				.bookmark
+				{
+					position: relative;
+					right: 0px;
+					top: 0px;
+					background-color: red;
+					height: 40px;
+				}
+				.frame
+				{
+					width:100%;
+					background-image: none;
+					height: 400px;
+				}
+				.flex-container
+				{
+					position: relative;
+					top: 0px;
+					left: 0px;
+					width: 100%;
+					display: inline-block;
+					height: 100%;
+				}
+				#fl1,#fl2
+				{
+					width: 100%;
+					position: relative;
+				}
+			}
+	</style>
+</head>
+<body>
+    <div class="frame">
+      <div a class="bookmark" href="#pop" data-toggle="collapse"></div>
+      <div class="flex-container">
+        <div class="flex-item" id="fl1">
+           <ul class="nav nav-tabs">
+		    <li class="active"><a data-toggle="tab" href="#sign_up">Sign Up</a></li>
+		    <li><a data-toggle="tab" href="#login">Login</a></li>
+		    </ul>
+		   <div class="tab-content">
+		    <div id="sign_up" class="tab-pane fade in active">
+		        <form name="myForm" action="" onsubmit=""  method="post">
+		        <div class="form">
+		        <label for="name">Name:</label><br>
+		        <input name ="name" type="name" id="name" placeholder="Enter name" required><br>
+		        </div>
+		        <div class="form">
+		        <label for="name">Phone No:</label><br>
+		        <input name ="ph_no" type="name" id="ph_no" placeholder="Enter phone no" required><br>
+		        </div>
+		        <div class="form">
+		        <label for="email">Email:</label><br>
+		        <input name ="email" type="email" id="email" placeholder="Enter email" required><br>
+		        </div>
+		        <div class="form">
+		        <label for="password">Password:</label><br>
+		        <input name ="password" type="password" id="pwd" placeholder="Enter password" required>
+		        </div>
+		        <div class="form">
+		        <button type="submit" name="signup">Submit</button>
+		        </div>
+		        </form>
+            </div>
+            <div id="login" class="tab-pane fade">
+		        <form name="myForm1" action="" onsubmit=""  method="post">
+		        <div class="form">
+		        <label for="email">Email:</label><br>
+		        <input name ="email" type="email" id="email" placeholder="Enter email" required><br>
+		        </div>
+		        <div class="form">
+		        <label for="password">Password:</label><br>
+		        <input name ="password" type="password" id="pwd" placeholder="Enter password" required>
+		        </div>
+		        <div class="form">
+		        <button type="submit" name="signup">Submit</button>
+		        </div>
+		        </form>
+            </div>
+           </div>
+        </div>
+        <div class="flex-item" id="fl2">
+           <div class="data"><p id="demo" style="font-size: 20px;"></p></div>
+           <div class="grid">
+		      <button name="left" class="bt" onclick="plus_slide(-1)" ><</button>
+		      <div class="box1" style="width: 31%">
+		      <img class="slide1" id="sl1" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\1.jpg">
+		      <img class="slide1" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\2.jpg">
+		      <img class="slide1" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\3.jpg">
+		      <img class="slide1" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\4.jpg">
+		      <img class="slide1" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\5.jpg">
+		      <img class="slide1" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\6.jpg">
+		      </div>
+		      <div class="box2" style="width: 31%">
+		      <img class="slide2" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\1.jpg">
+		      <img class="slide2" id="sl2"  src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\2.jpg">
+		      <img class="slide2" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\3.jpg">
+		      <img class="slide2" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\4.jpg">
+		      <img class="slide2" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\5.jpg">
+		      <img class="slide2" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\6.jpg">
+		      </div>
+		      <div class="box3" style="width: 31%">
+		      <img class="slide3" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\1.jpg">
+		      <img class="slide3" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\2.jpg">
+		      <img class="slide3" id="sl3" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\3.jpg">
+		      <img class="slide3" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\4.jpg">
+		      <img class="slide3" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\5.jpg">
+		      <img class="slide3" src="C:\Users\AVANTIKA GUPTA\Desktop\template2\image\6.jpg">
+		      </div>
+		      <button name="right" class="bt" onclick="plus_slide(+1)" >></button>
+		    </div>
+        </div>
+      </div>
+      <div id="pop" class="collapse">
+          <div class="content">   
+			<div class="cont"> 
+			  <div class="cole">                                       
+			  <div class="dropdown">
+			    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Category1
+			    <span class="caret"></span></button>
+			    <ul class="dropdown-menu">
+			      <li><a tabindex="-1" href="#">Topic1</a></li>
+			      <li><a tabindex="-1" href="#">Topic2</a></li>
+			      <li class="dropdown-submenu">
+			        <a class="test" tabindex="-1" href="#">Topic3<span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			          <li><a tabindex="-1" href="#">Subtopic1</a></li>
+			          <li><a tabindex="-1" href="#">Subtopic2</a></li>
+			        </ul>
+			      </li>
+			    </ul>
+			  </div>
+			  </div>
+			  <div class="cole">
+			  <div class="dropdown">
+			    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Category2
+			    <span class="caret"></span></button>
+			    <ul class="dropdown-menu">
+			      <li><a tabindex="-1" href="#">Topic1</a></li>
+			      <li><a tabindex="-1" href="#">Topic2</a></li>
+			      <li class="dropdown-submenu">
+			        <a class="test" tabindex="-1" href="#">Topic3<span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			          <li><a tabindex="-1" href="#">Subtopic1</a></li>
+			          <li><a tabindex="-1" href="#">Subtopic2</a></li>
+			        </ul>
+			      </li>
+			    </ul>
+			  </div>
+			  </div>
+			  <div class="cole">
+			  <div class="dropdown">
+			    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Category3
+			    <span class="caret"></span></button>
+			    <ul class="dropdown-menu">
+			      <li><a tabindex="-1" href="#">Topic1</a></li>
+			      <li><a tabindex="-1" href="#">Topic2</a></li>
+			      <li class="dropdown-submenu">
+			        <a class="test" tabindex="-1" href="#">Topic3<span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			          <li><a tabindex="-1" href="#">Subtopic1</a></li>
+			          <li><a tabindex="-1" href="#">Subtopic2</a></li>
+			        </ul>
+			      </li>
+			    </ul>
+			  </div>
+			  </div>
+			</div>
+			</div>
+
+      </div>
+    </div>
+<script >
+		var date = new Date();
+		var n = date.toDateString();
+		var time = date.toLocaleTimeString();
+
+		document.getElementById('demo').innerHTML = n + ' ' + time;
+</script>
+<script>
+		$(document).ready(function(){
+	  $('.dropdown-submenu a.test').on("click", function(e){
+	    $(this).next('ul').toggle();
+	    e.stopPropagation();
+	    e.preventDefault();
+	  });
+	});
+    </script>
+    <script>
+    var no = 1;
+    show_slide(no);
+
+    function plus_slide(n) {
+      show_slide(no += n);
+    }
+
+    function show_slide(n) {
+      var i;
+      var x = document.getElementsByClassName("slide1");
+      var y = document.getElementsByClassName("slide2");
+      var z = document.getElementsByClassName("slide3");
+      if (n > x.length) {no = 1}    
+      if (n < 1) {no = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+         y[i].style.display = "none"; 
+         z[i].style.display = "none"; 
+      }
+          var k=no
+   x[k-1].style.display = "block";
+   if (k >= x.length) {k = 0}  
+  y[k].style.display = "block";
+  if (k+1 >= x.length) {k = -1} 
+  z[k+1].style.display = "block";
+}
+</script>
+</body>
+</html>
