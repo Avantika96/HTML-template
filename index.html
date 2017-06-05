@@ -10,6 +10,58 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script>
+		
+		function Validateform()
+		{
+            var nm=document.myForm.name.value;
+			var pw=document.myForm.password.value;
+			var ph=document.myForm.ph_no.value;
+			var em=document.myForm.email.value;
+			  if(nm=="" || em=="" || ph=="" || pw=="")
+			  {
+			  	alert("Any field is empty. Fill all the fields");
+			  	return(false)
+			  }
+			  if(/^\d{10}$/.test(ph))
+			  {
+					  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(em))  
+					  {  
+					    return (true)  
+					  }  
+					  else
+					  {
+					    alert("You have entered an invalid email address!");
+					    return (false) 
+			  }
+			  }
+			  else
+			  {
+			  	alert("You have entered an invalid phone_no!") ;
+			    return (false)
+			  }
+
+		}
+		function Validateform1()
+		{
+			var em=document.myForm1.email.value;
+			var pw=document.myForm1.password.value;
+			if(em=="" || pw=="")
+			{
+				alert("Any field is empty. Fill all the fields");
+			  	return(false)
+			}
+			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(em))  
+					  {  
+					    return (true)  
+					  }  
+					  else
+					  {
+					    alert("You have entered an invalid email address!");
+					    return (false)
+					  }
+        }
+    </script>
 	<style>
 	    @media only screen and (max-width: 768px)  
 			{
@@ -55,22 +107,22 @@
 		    </ul>
 		   <div class="tab-content">
 		    <div id="sign_up" class="tab-pane fade in active">
-		        <form name="myForm" action="" onsubmit=""  method="post">
+		        <form name="myForm" action="" onsubmit="return (Validateform())"  method="post">
 		        <div class="form">
 		        <label for="name">Name:</label><br>
-		        <input name ="name" type="name" id="name" placeholder="Enter name" required><br>
+		        <input name ="name" type="name" id="name" placeholder="Enter name"><br>
 		        </div>
 		        <div class="form">
 		        <label for="name">Phone No:</label><br>
-		        <input name ="ph_no" type="name" id="ph_no" placeholder="Enter phone no" required><br>
+		        <input name ="ph_no" type="name" id="ph_no" placeholder="Enter phone no"><br>
 		        </div>
 		        <div class="form">
 		        <label for="email">Email:</label><br>
-		        <input name ="email" type="email" id="email" placeholder="Enter email" required><br>
+		        <input name ="email" type="name" id="email" placeholder="Enter email"><br>
 		        </div>
 		        <div class="form">
 		        <label for="password">Password:</label><br>
-		        <input name ="password" type="password" id="pwd" placeholder="Enter password" required>
+		        <input name ="password" type="password" id="pwd" placeholder="Enter password">
 		        </div>
 		        <div class="form">
 		        <button type="submit" name="signup">Submit</button>
@@ -78,10 +130,10 @@
 		        </form>
             </div>
             <div id="login" class="tab-pane fade">
-		        <form name="myForm1" action="" onsubmit=""  method="post">
+		        <form name="myForm1" action="" onsubmit="return (Validateform1())"  method="post">
 		        <div class="form">
 		        <label for="email">Email:</label><br>
-		        <input name ="email" type="email" id="email" placeholder="Enter email" required><br>
+		        <input name ="email" id="email" placeholder="Enter email" required><br>
 		        </div>
 		        <div class="form">
 		        <label for="password">Password:</label><br>
@@ -200,8 +252,8 @@
 	    e.preventDefault();
 	  });
 	});
-    </script>
-    <script>
+</script>
+<script>
     var no = 1;
     show_slide(no);
 
